@@ -1,6 +1,12 @@
 from config import vuln_app
 import os
+from flask import Flask, render_template
 
+app = Flask(__name__)
+
+@app.route('/ui/')
+def ui():
+    return render_template('index.html')
 '''
  Decide if you want to server a vulnerable version or not!
  DO NOTE: some functionalities will still be vulnerable even if the value is set to 0
