@@ -11,6 +11,10 @@
         "src": "/ui/(.*)",
         "dest": "app.py"
       }
-    ]
+    ],
+    "scripts": {
+         "build": "echo 'Running custom build script' && python3 -m pip install -r requirements.txt",
+         "postbuild": "echo 'Running post-build script'"
+     }
   }
   
